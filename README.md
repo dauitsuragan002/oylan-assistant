@@ -1,10 +1,10 @@
-# Personal Assistant Bot Framework with Oylan (KazLLM) API
+# Personal Assistant Bot Framework with Oylan (QazLLM) API
 
-This is a flexible framework for creating personalized Telegram bots that integrate with the **Oylan (KazLLM) API**. The framework allows you to create your own AI assistant with natural language capabilities in multiple languages. It also leverages **Soyle API** for advanced voice processing features.
+This is a flexible framework for creating personalized Telegram bots that integrate with the **Oylan (QazLLM) API**. The framework allows you to create your own AI assistant with natural language capabilities in multiple languages. It also leverages **Soyle API** for advanced voice processing features.
 
 ## Features
 
-- 🤖 **Custom Assistant Creation:** Create your own AI assistant using Oylan (KazLLM) API with customizable name, description, and behavior
+- 🤖 **Custom Assistant Creation:** Create your own AI assistant using Oylan (QazLLM) and Soyle TTS, ACR API with customizable name, description, and behavior
 - 🗣️ **Advanced Voice Processing:**
   - Voice Recognition with automatic language detection
   - Text-to-Speech synthesis
@@ -140,7 +140,7 @@ These modules allow you to fully customize your assistant's behavior, including:
 
 - [x] Initialize Telegram bot with Aiogram
 - [x] Set up environment variables for API keys
-- [x] Integrate Oylan (KazLLM) API for responses
+- [x] Integrate Oylan (QazLLM) and Soyle TTS, ACR API for responses
 - [x] Add voice message handling with auto-detection
 - [x] Implement multilingual support (KK, RU, EN, TR)
 - [x] Add advanced TTS and transcription features
