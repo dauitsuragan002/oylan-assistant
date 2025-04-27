@@ -1,6 +1,5 @@
-# 
+# import
 import os, requests
-import speech_recognition as sr
 from dotenv import load_dotenv
 from aiogram import Bot
 from aiogram.fsm.storage.memory import MemoryStorage
@@ -21,7 +20,6 @@ ASSISTANT_ID = '1'  # Example: '1'
 bot = Bot(token=token)
 storage = MemoryStorage()
 dp = Dispatcher(storage=storage)
-recognizer = sr.Recognizer()
 
 # KazLLM, Soyle App API engdpoint base urls
 URL_KAZLLM = "https://oylan.nu.edu.kz/api/v1/"
