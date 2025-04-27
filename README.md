@@ -69,10 +69,11 @@ py -m api_issai.assistant.update
 py -m api_issai.assistant.get_info
 ```
 
-4. Add context files:
+4. Add context files `add_context.py`:
 ```bash
 pyt -m api_issai.contexts.add_context
 ```
+etc.
 
 These modules allow you to fully customize your assistant's behavior, including:
 - Name, id and description
