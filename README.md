@@ -38,12 +38,11 @@ pip install -r requirements.txt
 1. Create a `.env` file with your API keys:
 
 ```env
-TOKEN=<Your Telegram Bot Token>
-API_RESPONSE=<Your Oylan API Key>
-API_SOYLE=<Your Soyle API Key>
+TOKEN=<Your Telegram Bot Token> → https://t.me/BotFather
+API_RESPONSE=<Your Oylan API Key> → https://oylan.nu.edu.kz/keys
+API_SOYLE=<Your Soyle API Key> → https://mangisoz.nu.edu.kz/keys
 API_MAIN_SOYLE=<Your Main Soyle API Key>
 ```
-
 To get the Main Soyle API Key:
 1. Open the browser and go to [https://mangisoz.nu.edu.kz/soyle](https://mangisoz.nu.edu.kz/soyle)
 2. Open 'dev tools' (F12)
