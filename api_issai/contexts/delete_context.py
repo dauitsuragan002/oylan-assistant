@@ -1,5 +1,5 @@
 import requests
-from api_issai.config import *
+from ..config import URL_OYLAN, API_KEY, ASSISTANT_ID
 
 def delete_context(assistant_id, context_id):
     """
@@ -8,7 +8,7 @@ def delete_context(assistant_id, context_id):
     :param context_id: контекст ID
     :return: True (жойылды) немесе False (қате)
     """
-    url = f"{URL_KAZLLM}assistant/{assistant_id}/contexts/{context_id}/"
+    url = f"{URL_OYLAN}assistant/{assistant_id}/contexts/{context_id}/"
     headers = {
         "accept": "application/json",
         "Authorization": f"Api-Key {API_KEY}"

@@ -1,5 +1,6 @@
 import requests
-from api_issai.config import *
+from ..config import URL_OYLAN, API_KEY, ASSISTANT_ID
+
 
 HEADERS = {
     "Authorization": f"Api-Key {API_KEY}",
@@ -7,7 +8,7 @@ HEADERS = {
 }
 
 def get_contexts_with_ids(assistant_id):
-    url = f"{URL_KAZLLM}assistant/{assistant_id}/"
+    url = f"{URL_OYLAN}assistant/{assistant_id}/"
     response = requests.get(url, headers=HEADERS)
     if response.status_code == 200:
         data = response.json()

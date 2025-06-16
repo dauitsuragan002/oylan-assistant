@@ -1,7 +1,8 @@
 import requests
-from api_issai.config import *  # Import all configurations like API_KEY, URL_KAZLLM, ASSISTANT_ID
-import requests
 
+from ..config import URL_OYLAN, API_KEY
+
+# Function to create a new assistant
 def create_assistant(
     name,
     description,
@@ -11,7 +12,7 @@ def create_assistant(
     system_instructions=None,
     context=None
 ):
-    url = f"{URL_KAZLLM}assistant/"
+    url = f"{URL_OYLAN}assistant/"
     headers = {
         "accept": "application/json",
         "Content-Type": "application/json",

@@ -1,6 +1,6 @@
 import requests
 
-from api_issai.config import *  # Import all configurations like API_KEY, URL_KAZLLM, ASSISTANT_ID
+from ..config import URL_OYLAN, API_KEY 
 
 # Function to check for existing assistants or create a new one
 def check_or_create_assistant():
@@ -10,7 +10,7 @@ def check_or_create_assistant():
     }
 
     # Fetch existing assistants
-    url= f"{URL_KAZLLM}assistant"
+    url= f"{URL_OYLAN}assistant"
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
         assistants = response.json()
@@ -32,7 +32,7 @@ def get_assistant_name_by_id(assistant_id):
         "Authorization": f"Api-Key {API_KEY}",
         "accept": "application/json"
     }
-    url = f"{URL_KAZLLM}assistant"  # Барлық ассистенттер тізімі
+    url = f"{URL_OYLAN}assistant"  # Барлық ассистенттер тізімі
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
         assistants = response.json()

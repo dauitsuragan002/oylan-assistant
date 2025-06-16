@@ -1,15 +1,15 @@
 import requests
 
-from config import *  # Import all configurations like API_KEY, URL_KAZLLM, ASSISTANT_ID
+from config import API_MAIN_SOYLE  # Import all configurations like API_KEY, URL_OYLAN, ASSISTANT_ID
 
 def autodetect_language(text, api_key):
     """
-    Soyle API арқылы мәтіннің тілін автоматты анықтау.
-    :param text: Тексерілетін мәтін
-    :param api_key: Soyle сервисінің Bearer токені
-    :return: анықталған тіл (str) немесе қате
+    Automatically detect the language of the text using the Soyle API.
+    :param text: The text to check
+    :param api_key: Bearer token for the Soyle service
+    :return: detected language (str) or error
     """
-    url = "https://soyle.nu.edu.kz/api/autodetect/"
+    url = "https://mangisoz.nu.edu.kz/api/autodetect/"
     headers = {
         "accept": "application/json",
         "Content-Type": "application/json",

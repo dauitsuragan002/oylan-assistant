@@ -23,9 +23,9 @@ storage = MemoryStorage()
 dp = Dispatcher(storage=storage)
 recognizer = sr.Recognizer()
 
-# KazLLM, Soyle App API engdpoint base urls
-URL_KAZLLM = "https://oylan.nu.edu.kz/api/v1/"
-URL_SOYLE = "https://soyle.nu.edu.kz/external-api/v1/"
+# OYLAN, Soyle App API engdpoint base urls
+URL_OYLAN = "https://oylan.nu.edu.kz/api/v1/"
+URL_SOYLE = "https://mangisoz.nu.edu.kz/external-api/v1/"
 
 # Function to get assistant information by ID
 def get_assistant_info_by_id(assistant_id):
@@ -33,7 +33,7 @@ def get_assistant_info_by_id(assistant_id):
         "Authorization": f"Api-Key {API_KEY}",
         "accept": "application/json"
     }
-    url = f"{URL_KAZLLM}assistant" 
+    url = f"{URL_OYLAN}assistant" 
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
         assistants = response.json()

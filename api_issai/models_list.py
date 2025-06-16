@@ -1,9 +1,9 @@
 import requests
 
-from config import *  # Import all configurations like API_KEY, URL_KAZLLM, ASSISTANT_ID
+from config import *
 
 def get_available_models():
-    url = f"{URL_KAZLLM}assistant/models/"
+    url = f"{URL_OYLAN}assistant/models/"
     headers = {
         "Authorization": f"Api-Key {API_KEY}",
         "accept": "application/json"

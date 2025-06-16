@@ -1,10 +1,10 @@
-# Personal Assistant Bot Framework with Oylan (KazLLM) API
+# Personal Assistant Bot Framework with Oylan 2 API
 
-This is a flexible framework for creating personalized Telegram bots that integrate with the **Oylan (KazLLM) API**. The framework allows you to create your own AI assistant with natural language capabilities in multiple languages. It also leverages **Soyle API** for advanced voice processing features.
+This is a flexible framework for creating personalized Telegram bots that integrate with the **Oylan 2 API**. The framework allows you to create your own AI assistant with natural language capabilities in multiple languages. It also leverages **Soyle API** for advanced voice processing features.
 
 ## Features
 
-- 🤖 **Custom Assistant Creation:** Create your own AI assistant using Oylan (KazLLM) API with customizable name, description, and behavior
+- 🤖 **Custom Assistant Creation:** Create your own AI assistant using Oylan 2 API with customizable name, description, and behavior
 - 🗣️ **Advanced Voice Processing:**
   - Voice Recognition with automatic language detection
   - Text-to-Speech synthesis
@@ -41,9 +41,9 @@ pip install -r requirements.txt
 TOKEN=<Your Telegram Bot Token>
 API_RESPONSE=<Your Oylan API Key>
 API_SOYLE=<Your Soyle API Key>
-API_MAIN_SOYLE=<Your Main Soyle API Key, get it in the browser 'dev tools' > https://soyle.nu.edu.kz/soyle>
-
+API_MAIN_SOYLE=<Your Main Soyle API Key, get it in the browser 'dev tools' > https://mangisoz.nu.edu.kz/soyle> 
 ```
+![How to get main Soyle API Key](temp/get_token.jpg)
 
 2. Configure your assistant in `config.py`:
 ```python
@@ -96,51 +96,11 @@ These modules allow you to fully customize your assistant's behavior, including:
 - Multilingual interface
 - Language-specific responses
 
-## Project Structure
-
-```plaintext
-├── e_app.py
-├── .env
-├── config.py
-├── README.md
-├── requirements.txt
-├── tmp/
-│   ├── image/
-│   └── voice/
-├── modules/
-│   ├── bot.py
-│   ├── callbacks.py
-│   ├── commands.py
-│   ├── functions.py
-│   ├── locate.py   
-├── api_issai/
-│   ├── config.py
-│   ├── models_list.py
-│   ├── assistant/
-│   │   ├── create.py
-│   │   ├── get_info.py
-│   │   ├── update.py
-│   │   └── __pycache__/
-│   ├── contexts/
-│   │   ├── add_context.py
-│   │   ├── context.docx
-│   │   ├── delete_context.py
-│   │   ├── get_context.py
-│   │   └── __pycache__/
-│   ├── soyle/
-│   │   ├── auto_detected.py
-│   │   ├── kaz_tts_output.wav
-│   │   ├── output_audio.mp3
-│   │   ├── transcription.py
-│   │   └── tts.py
-│   └── __pycache__/
-```
-
 ## To-Do List
 
 - [x] Initialize Telegram bot with Aiogram
 - [x] Set up environment variables for API keys
-- [x] Integrate Oylan (KazLLM) API for responses
+- [x] Integrate Oylan 2 API for responses
 - [x] Add voice message handling with auto-detection
 - [x] Implement multilingual support (KK, RU, EN, TR)
 - [x] Add advanced TTS and transcription features

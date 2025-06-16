@@ -1,5 +1,5 @@
-import requests
-from api_issai.config import * # Import all configurations like API_KEY, URL_KAZLLM, ASSISTANT_ID
+import requests, os
+from ..config import URL_OYLAN, API_KEY, ASSISTANT_ID
 
 # Configuration for the request headers
 HEADERS = {
@@ -9,7 +9,7 @@ HEADERS = {
 
 # Function to upload context from a DOCX file
 def upload_docx_context(assistant_id, file_path):
-    url = f"{URL_KAZLLM}assistant/{assistant_id}/upload-docx/"
+    url = f"{URL_OYLAN}assistant/{assistant_id}/upload-docx/"
 
     # Check if the file exists
     if not os.path.exists(file_path):

@@ -1,6 +1,7 @@
 import requests
-from api_issai.config import *  # Import all configurations like API_KEY, URL_KAZLLM, ASSISTANT_ID
+from ..config import URL_OYLAN, API_KEY
 
+# Function to update an assistant fully or partially
 def update_assistant_full(
     assistant_id,
     name,
@@ -14,7 +15,7 @@ def update_assistant_full(
     """
     Oylan API арқылы ассистентті толық жаңарту (PUT).
     """
-    url = f"{URL_KAZLLM}assistant/{assistant_id}/"
+    url = f"{URL_OYLAN}assistant/{assistant_id}/"
     headers = {
         "accept": "application/json",
         "Content-Type": "application/json",
@@ -40,13 +41,12 @@ def update_assistant_full(
     else:
         return None
 
-
 def update_assistant_partial(assistant_id, **kwargs):
     """
     Oylan API арқылы ассистентті жартылай жаңарту (PATCH).
     kwargs арқылы тек өзгертілетін өрістерді беріңіз.
     """
-    url = f"{URL_KAZLLM}assistant/{assistant_id}/"
+    url = f"{URL_OYLAN}assistant/{assistant_id}/"
     headers = {
         "accept": "application/json",
         "Content-Type": "application/json",
