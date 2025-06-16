@@ -43,7 +43,7 @@ API_RESPONSE=<Your Oylan API Key>
 API_SOYLE=<Your Soyle API Key>
 API_MAIN_SOYLE=<Your Main Soyle API Key, get it in the browser 'dev tools' > https://mangisoz.nu.edu.kz/soyle> 
 ```
-![How to get main Soyle API Key](temp/get_token.jpg)
+![How to get main Soyle API Key](tmp/get_token.jpg)
 
 2. Configure your assistant in `config.py`:
 ```python
