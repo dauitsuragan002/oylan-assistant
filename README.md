@@ -41,9 +41,16 @@ pip install -r requirements.txt
 TOKEN=<Your Telegram Bot Token>
 API_RESPONSE=<Your Oylan API Key>
 API_SOYLE=<Your Soyle API Key>
-API_MAIN_SOYLE=<Your Main Soyle API Key> 
+API_MAIN_SOYLE=<Your Main Soyle API Key>
 ```
-Get token it in the browser 'dev tools' > https://mangisoz.nu.edu.kz/soyle
+
+To get the Main Soyle API Key:
+1. Open the browser and go to [https://mangisoz.nu.edu.kz/soyle](https://mangisoz.nu.edu.kz/soyle)
+2. Open 'dev tools' (F12)
+3. Go to the Application tab → Cookies → https://mangisoz.nu.edu.kz
+4. Copy the value of `accessToken`
+5. Paste it into your `.env` file as `API_MAIN_SOYLE=<accessToken>`
+
 ![How to get main Soyle API Key](tmp/get_token.jpg)
 
 2. Configure your assistant in `config.py`:
