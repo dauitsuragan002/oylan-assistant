@@ -53,6 +53,8 @@ async def synthesize_speech(text, output_file, language):
 def hex_to_base64(hex_string: str) -> str:
     """
     Convert a hex string to Base64.
+    :param hex_string: Hexadecimal string to convert
+    :return: Base64 encoded string
     """
     byte_data = bytes.fromhex(hex_string)
     base64_data = base64.b64encode(byte_data)
@@ -94,10 +96,10 @@ def convert_audio_to_base64(audio_file_path):
 # Function auto detect language
 def autodetect_language(text):
     """
-    Негізгі Soyle сайты арқылы мәтіннің тілін автоматты анықтау.
-    :param text: Тексерілетін мәтін
-    :param api_key: Soyle сервисінің Bearer токені
-    :return: анықталған тіл (str) немесе қате
+    Automatically detect the language of the text using the main Soyle website.
+    :param text: The text to check
+    :param api_key: Bearer token for the Soyle service
+    :return: detected language (str) or error
     """
     url = "https://soyle.nu.edu.kz/api/autodetect/"
     headers = {
@@ -116,6 +118,5 @@ def autodetect_language(text):
         return None
 
 def get_user_lang(user_id):
-    # config.user_languages[user_id] = ('kaz', 'Қазақ тілі') сияқты сақталады
     lang = config.user_languages.get(user_id, ('kaz', 'Қазақ тілі'))[0]
     return lang

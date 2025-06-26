@@ -1,6 +1,6 @@
-# Personal Assistant Bot Framework with Oylan 2 API
+# Personal Assistant Bot Framework with Oylan,Soyle and Beynele API
 
-This is a flexible framework for creating personalized Telegram bots that integrate with the **Oylan 2 API**. The framework allows you to create your own AI assistant with natural language capabilities in multiple languages. It also leverages **Soyle API** for advanced voice processing features.
+This is a flexible framework for creating personalized Telegram bots that integrate with the leverages **SoyleTTS**, **SoyleSTT**, and **Oylan2** API for advanced voice and text processing. The Telegram bot works in 4 languages (Kazakh, Russian, English, Turkish).
 
 ## Features
 
@@ -41,79 +41,77 @@ pip install -r requirements.txt
 TOKEN=<Your Telegram Bot Token> → https://t.me/BotFather
 API_RESPONSE=<Your Oylan API Key> → https://oylan.nu.edu.kz/keys
 API_SOYLE=<Your Soyle API Key> → https://mangisoz.nu.edu.kz/keys
-API_MAIN_SOYLE=<Your Main Soyle API Key>
+API_MAIN_SOYLE=<set accesToken>
+API_MAIN_BEYNELE=<set accesToken>
 ```
-To get the Main Soyle API Key:
+How to get accesToken?:
 1. Open the browser and go to [https://mangisoz.nu.edu.kz/soyle](https://mangisoz.nu.edu.kz/soyle)
 2. Open 'dev tools' (F12)
-3. Go to the Application tab → Cookies → https://mangisoz.nu.edu.kz
+3. Go to the Application tab → Cookies → https://mangisoz.nu.edu.kz or https://beynele.nu.edu.kz/beynele
 4. Copy the value of `accessToken`
-5. Paste it into your `.env` file as `API_MAIN_SOYLE=<accessToken>`
+5. Paste it into your `.env` file as `API_MAIN_SOYLE=<accessToken>` or `API_MAIN_BEYNELE=<accessToken>`
 
-![How to get main Soyle API Key](tmp/get_token.jpg)
+![How to get accessToken](tmp/get_token.jpg)
 
-2. Configure your assistant in `config.py`:
+6. Configure your assistant in `config.py`:
 ```python
 ASSISTANT_ID = 'your_assistant_id'
 ```
 
 ### Creating Your Assistant
 
-You can create and configure your assistant using the provided modules in `api_issai/assistant/`:
+You can create and configure your assistant using the provided modules in `cd assistant/`:
 
 1. Create a new assistant using `create.py`:
 ```bash
-py -m api_issai.assistant.create
-
+py -m create
 ```
 2. Update assistant settings using `update.py`:
 ```bash
-py -m api_issai.assistant.update
-
+py -m update
 ```
 3. Get assistant information using `get_info.py`:
 ```bash
-py -m api_issai.assistant.get_info
+py -m get_info
 ```
-
-4. Add context files:
+4. Add context files using `add_context.py`::
 ```bash
-pyt -m api_issai.contexts.add_context
+py -m add_context
+```
+5. List supported models using `model_list.py`:
+```bash
+py -m model_list
 ```
 
-These modules allow you to fully customize your assistant's behavior, including:
-- Name, id and description
-- System instructions
-- Context data
+### Creating Your Assistant Context
 
-## Advanced Features
+These scripts allow you to manage context files for your assistant, such as adding, deleting, or retrieving context your assistant. You can also use the context management scripts in `cd context/`:
 
-### Voice Processing
-- Automatic language detection for voice messages
-- High-quality text-to-speech synthesis
-- Accurate transcription services
+1. Add a new context using `add_context.py`:
+```bash
+py -m contexts.add_context
+```
+2. Delete a context using `delete_context.py`:
+```bash
+py -m contexts.delete_context
+```
+3. Get context information using `get_context.py`:
+```bash
+py -m contexts.get_context
+```
 
-### Context Management
-- Add multiple context files
-- View and manage existing contexts
-- Delete outdated contexts
+### Running the Bot
 
-### Language Support
-- Automatic language detection
-- Multilingual interface
-- Language-specific responses
+To start the Telegram bot, simply run the following command in the project root directory:
 
-## To-Do List
+```bash
+python oylan_app.py
+```
 
-- [x] Initialize Telegram bot with Aiogram
-- [x] Set up environment variables for API keys
-- [x] Integrate Oylan 2 API for responses
-- [x] Add voice message handling with auto-detection
-- [x] Implement multilingual support (KK, RU, EN, TR)
-- [x] Add advanced TTS and transcription features
-- [x] Implement file_prompt (image, audio) handling
-- [ ] Implement file_prompt (video, docs) handling
-- [ ] ISSAI API Python SDK
+This will launch your personal assistant bot with all configured features.
+
+## CREDIT ISSAI PLAYGROUND
+https://github.com/dauitsuragan002/issai-playground
 
 ## License
 
