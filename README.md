@@ -2,6 +2,8 @@
 
 This is a flexible framework for creating personalized Telegram bots that integrate with the leverages **SoyleTTS**, **SoyleSTT**, and **Oylan2** API for advanced voice and text processing. The Telegram bot works in 4 languages (Kazakh, Russian, English, Turkish).
 
+> **Note:** This project is based on the repository [ISSAI Playground](https://github.com/davidsuragan/issai-playground).
+
 ## Features
 
 - 🤖 **Custom Assistant Creation:** Create your own AI assistant using Oylan 2 API with customizable name, description, and behavior
